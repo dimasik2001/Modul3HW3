@@ -4,11 +4,17 @@ namespace Modul3HW3
 {
     public class Program
     {
+        public static void Show(bool result)
+        {
+            Console.WriteLine(result);
+        }
+
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Console.WriteLine("Hello World!");
-            Console.WriteLine("Hello World!");
+            var firstClass = new Class1();
+            var secondClass = new Class2();
+            firstClass.DelegateForShow += Show;
+            firstClass.InvokeDelegateForShow(secondClass.Calc((x, y) => (int)Math.Pow(x, y), 3, 3).Invoke(27));
         }
     }
 }
