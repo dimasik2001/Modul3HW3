@@ -12,7 +12,7 @@ namespace Modul3HW3
 
         public void InvokeDelegateForShow(bool status)
         {
-            DelegateForShow.Invoke(status);
+            DelegateForShow?.Invoke(status);
         }
     }
 }
