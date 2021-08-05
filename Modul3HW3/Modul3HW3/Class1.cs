@@ -8,11 +8,11 @@ namespace Modul3HW3
 {
     public class Class1
     {
-        public event Action<bool> DelegateForShow;
+        public Action<bool> ShowHandler { get; set; }
 
-        public void InvokeDelegateForShow(bool status)
+        public int Pow(int x, int y)
         {
-            DelegateForShow?.Invoke(status);
+            return x * y;
         }
     }
 }
